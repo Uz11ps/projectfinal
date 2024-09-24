@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #container {
+      position: relative;
+      width: 100%;
+    }
+    
+    #menu {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+    .card {
+      width: 200px;
+      height: 300px;
+      position: absolute;
+      right: -50px;
+      top: 0;
+      transition: right 0.5s;
+      overflow: hidden;
+    }
+    
+    .card-content {
+      background-color: white;
+      height: 100%;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .expanded {
+      right: 150px;
+    }
+    
+    .expanded .card-content {
+      opacity: 1;
+    }
+    
+    .card h3 {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Добавляем стили для каждой карточки */
+    
+    .card-one {
+      background-color: lightblue;
+    }
+    
+    .card-two {
+      background-color: lightgreen;
+    }
+    
+    .card-three {
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="menu">
+      <img src="path/to/your/image.jpg" alt="Menu">
+      <h2>Меню</h2>
+    </div>
+    
+    <div class="card card-one">
+      <h3>Для мясоедов</h3>
+      <div class="card-content">
+        <p>Текст для блока "Для мясоедов".</p>
+      </div>
+    </div>
+    
+    <div class="card card-two">
+      <h3>Для мясоедов</h3>
+      <div class="card-content">
+        <p>Текст для блока "Для мясоедов".</p>
+      </div>
+    </div>
+    
+    <div class="card card-three">
+      <h3>Для мясоедов</h3>
+      <div class="card-content">
+        <p>Текст для блока "Для мясоедов".</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('expanded'));
+        card.classList.add('expanded');
+      });
+    });
+  </script>
+</body>
+</html>

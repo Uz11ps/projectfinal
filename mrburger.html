@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=8e23f0ea-79bc-4142-9f3b-7f6bdf7d0a4d&lang=ru_RU" type="text/javascript"></script>
+<link rel="stylesheet" href="mrburdercss.css"></linkrel>
+</head>
+<body>
+  <div class="box">
+<div class="mrburger-size">
+    <header>
+        <div class="logo"></div>
+        <div class="menu">
+            <a href="#">о нас</a>
+            <div class="dot"></div>
+            <a href="#">бургеры</a>
+            <div class="dot"></div>
+            <a href="#">меню</a>
+            <div class="dot"></div>
+            <a href="#">отзывы</a>
+            <div class="dot"></div>
+            <a href="#">как мы работаем</a>
+            <div class="dot"></div>
+            <a href="#">контакты</a>
+        </div>
+        <div>
+            <a class="order-button" href="#">заказать</a>
+            <div class="buttons">
+              <button id="button1" class="btn_button"></button>
+              <button id="button2" class="btn_button"></button>
+              <button id="button3" class="btn_button"></button>
+              <button id="button4" class="btn_button"></button>
+              <button id="button5" class="btn_button"></button>
+              <button id="button6" class="btn_button"></button>
+              <button id="button7" class="btn_button"></button>
+              <button id="button8" class="btn_button"></button>
+              <button id="button9" class="btn_button"></button>
+            </div>
+        </div>
+    </header>
+    <div class="main-section" id="section1">
+      <div class="main-section_2">
+        <img class="burger-drops" src="photo/drops.png" alt="Натуральные бургеры">
+        <img class="burger-image" src="photo/ste.png" alt="Натуральные бургеры">
+      </div>
+        <div class="slogan">
+            <img class="burger-text" src="photo/Мы делаем натуральные бургеры.png" alt="Натуральные бургеры">
+        </div>
+    </div>
+    <div class="arrow-croll"><div class="arrow" onclick="scrollDown()"></div></div>
+</div>
+<div class="mrburger-luchie" id="section2">
+    <div class="container">
+        <div class="title"></div>
+        <div class="images">
+            <div class="image">
+                <img src="photo/meat.png" alt="Image 1" width="100">
+                <div class="caption">100% свежее мясо</div>
+                <div class="spacer"></div>
+                <div class="text_logo2">
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                </div>
+            </div>
+            <div class="image">
+                <img src="photo/hand.png" alt="Image 2" width="100">
+                <div class="caption">Ручная сборка</div>
+                <div class="spacer"></div>
+                <div class="text_logo2">
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                </div>
+            </div>
+            <div class="image">
+                <img src="photo/natural.png" alt="Image 3" width="100">
+                <div class="caption">натуральные</div>
+                <div class="caption">ингредиенты</div>
+                <div class="spacer"></div>
+                <div class="text_logo2">
+                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+</div>
+<div class="mrburger-darkbeef" id="section3">
+  
+    <div class="arrow-darkbeef arrow-left-darkbeef" onclick="prevSlide()"></div>
+  <div class="arrow-darkbeef arrow-right-darkbeef" onclick="nextSlide()"></div>
+  <div class="slider-darkbeef">
+    <div class="slide-darkbeef">
+      <img src="photo/Бургер+с+чернилами+каракатицы.png" alt="Burger">
+      <div class="description-darkbeef">
+        <h2 class="h2_desc">Dark BEEF Burger</h2>
+        <p class="p_desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+        <div class="order-darkbeef">
+          <h3 class="h3_desc">500 рублей</h3>
+          <button class="button-darkbeef" onclick="order()">Заказать</button>
+        </div>
+      </div>
+    </div>
+    <div class="slide-darkbeef">
+      <img src="photo/ste.png" alt="Burger">
+      <div class="description-darkbeef">
+        <h2 class="h2_desc">Dark BEEF Burger</h2>
+        <p class="p_desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+        <div class="order-darkbeef">
+          <h3 class="h3_desc">500 рублей</h3>
+          <button class="button-darkbeef" onclick="order()">Заказать</button>
+        </div>
+      </div>
+    </div>
+    <div class="slide-darkbeef">
+      <img src="photo/chizburger.png" alt="Burger">
+      <div class="description-darkbeef">
+        <h2 class="h2_desc">Dark BEEF Burger</h2>
+        <p class="p_desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+        <div class="order-darkbeef">
+          <h3 class="h3_desc">500 рублей</h3>
+          <button class="button-darkbeef" onclick="order()">Заказать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <div class="composition-button-darkbeef">
+        <img src="photo/burger.png" alt="Composition" onclick="openModal()" class="burger_com">
+        <p class="p_burger">Состав</p>
+      </div>
+
+      <div class="composition-button-darkbeef2">
+        <div class="composition-button-darkbeef2_1">
+        <img src="photo/kkal.png" onclick="openModal()">
+        <img src="photo/1200.png" class="Composition3">
+        <p class="kkal">ККАЛ</p>
+        </div>
+      </div>
+
+      <div id="myModal" class="modal-darkbeef">
+        <div class="modal-content-darkbeef">
+          <span class="close-darkbeef" onclick="closeModal()">&times;</span>
+          <div class="modal-slides-darkbeef">
+            <div class="modal-slide-darkbeef">
+              <img class="img-darkbeef" src="photo/иууа.png" alt="Beef">
+              <p>Говядина</p>
+              <p>300г</p>
+            </div>
+            <div class="modal-slide-darkbeef">
+              <img class="img-darkbeef" src="photo/cheese.png" alt="Cheese">
+              <p>Сыр</p>
+              <p>80г</p>
+            </div>
+            <div class="modal-slide-darkbeef">
+              <img class="img-darkbeef" src="photo/buns.png" alt="Tomato">
+              <p>булочки</p>
+              <p>100г</p>
+            </div>
+            <div class="modal-slide-darkbeef">
+              <img class="img-darkbeef" src="photo/salad.png" alt="Onion">
+              <p>зелень</p>
+              <p>70г</p>
+            </div>
+            <div class="modal-slide-darkbeef">
+              <img class="img-darkbeef" src="photo/sauce.png" alt="Lettuce">
+              <p>соус</p>
+              <p>150г</p>
+            </div>
+            <div class="modal-slide-darkbeef">
+              <img class="img-darkbeef" src="photo/cucumber.png" alt="Sauce">
+              <p>овощи</p>
+              <p>200г</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+<div class="line4"       id="section4">
+
+
+<div class="mrburger-comand_left"></div>
+<div class="mrburger-comand_right">  
+
+  <div class="mrburger-comand">
+    <div class="command">КОМАНДА</div>
+    <div class="member">
+      <div class="toggle-arrow">&#9660;</div>
+      <h3 class="h3_text">Дэниэл Редклиф</h3>
+      <div class="after_comand">
+        <div class="avatar"></div>
+        <div class="description">
+          <p class="decs_p">Оператор</p> 
+          <p class="decs_p2">Подобрать идеальный бургер и оформить</p>
+        </div>
+      </div>
+    </div>
+    <div class="member">
+      <div class="toggle-arrow">&#9660;</div>
+      <h3 class="h3_text">Ричард Джеймс</h3>
+      <div class="after_comand">
+        <div class="avatar"></div>
+        <div class="description">
+          <p class="decs_p">Оператор</p> 
+          <p class="decs_p2">Подобрать идеальный бургер и оформить</p>
+        </div>
+      </div>
+    </div>
+    <div class="member">
+      <div class="toggle-arrow">&#9660;</div>
+      <h3 class="h3_text">Джейк Финн</h3>
+      <div class="after_comand">
+        <div class="avatar"></div>
+        <div class="description">
+          <p class="decs_p">Оператор</p> 
+          <p class="decs_p2">Подобрать идеальный бургер и оформить</p>
+        </div>
+      </div>
+    </div>
+    <div class="member">
+      <div class="toggle-arrow">&#9660;</div>
+      <h3 class="h3_text">Николай Иванов</h3>
+      <div class="after_comand">
+        <div class="avatar"></div>
+        <div class="description">
+          <p class="decs_p">Оператор</p> 
+          <p class="decs_p2">Подобрать идеальный бургер и оформить</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<div class="mrburger-menu" id="section5">
+
+  <!-- <div class="menu-menu" id="menu">
+  </div>
+  <div class="sidebar-menu">
+    <div class="flex_row">
+    <div class="line-menu" onclick="changeContent(1)">
+      Для мясоедов
+    </div>
+    <div class="line-menu2" onclick="changeContent(2)">
+      вегетарианское
+    </div>
+    <div class="line-menu3" onclick="changeContent(3)">
+      Диетическое
+    </div>
+  </div>
+  </div>
+  <div class="content-menu" id="content">
+    <div class="menu_image"></div>
+  </div> -->
+  <!-- <div class="menu-menu" id="menu">
+  </div>
+  <div class="sidebar-menu">
+    <div class="flex_row">
+      <div class="line-menu" onclick="changeContent(1)">
+        Для мясоедов
+      </div>
+      <div class="line-menu2" onclick="changeContent(2)">
+        вегетарианское
+      </div>
+      <div class="line-menu3" onclick="changeContent(3)">
+        Диетическое
+      </div>
+    </div>
+  </div>
+  <div class="content-menu" id="content">
+    <div class="menu_image"></div>
+  </div> -->
+
+
+  <div class="container4">
+    <div class="menu_texty">МЕНЮ</div>
+    <div class="one" id="oneio">
+      <div class="one_box">
+        <div class="text_wrap">ДЛЯ МЯСОЕДОВ</div>
+        <div class="text_burger_wrap">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+          Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+          </div>
+      </div>
+    </div>
+    <div class="two" id="twoio">
+        <div class="text_wrap">ВЕГЕТАРИАНСКОЕ</div>
+        <div class="two_box">
+          <div class="text_burger_wrap">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+            </div>
+        </div>
+    </div>
+    <div class="three" id="threeio">
+        <div class="text_wrap">ДИЕТИЧЕСКОЕ</div>
+        <div class="three_box">
+          <div class="text_burger_wrap">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="mrburger-after" id="section6">
+  <div class="gallery">
+    <div class="row">
+      <div class="photo">
+        <img src="photo/photo-1.png" alt="Фото 1">
+        <div class="overlay">
+          <div class="text">Нина</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Нина', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="photo/photo-2.png" alt="Фото 2">
+        <div class="overlay">
+          <div class="text">Антон</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Антон', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="photo/photo-3.png" alt="Фото 1">
+        <div class="overlay">
+          <div class="text">Вера</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Вера', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="photo/photo-4.png" alt="Фото 1">
+        <div class="overlay">
+          <div class="text">Степан</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Степан', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+      <div class="photo">
+        <img src="photo/photo-5.png" alt="Фото 1">
+        <div class="overlay">
+          <div class="text">Инокентий</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Инокентий', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="photo/photo-6.png" alt="Фото 1">
+        <div class="overlay">
+          <div class="text">Нора</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Нора', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="photo/photo-7.png" alt="Фото 1">
+        <div class="overlay">
+          <div class="text">Гейб</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Гейб', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="photo/photo-8.png" alt="Фото 1">
+        <div class="overlay">
+          <div class="text">Виктор</div>
+          <div class="details">
+            <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+            <button onclick="openeModal('Виктор', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно')" class="btn_lione7">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- HTML код для модального окна -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close" class="close">&times;</span>
+      <div id="modal-content">
+        <h3>Фамилия</h3>
+        <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<div class="mrburger-video" id="section7">
+
+  <div class="content">
+    <h1>Как мы работаем</h1>
+    <!-- <p>Здесь будет описание вашего процесса работы.</p> -->
+</div>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/iPA_LBw2Jw0&ab" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+
+
+
+<div class="mrburger-form" id="section8">
+
+
+  <div class="form-container">
+    <div class="line8">Закажите доставку</div>
+    <form id="orderForm" class="orderForm1123">
+        <div class="orderForm1">
+            <div class="orderForm_left">
+                <div class="input_p">
+                    <div class="p_left_1">Имя</div>
+                    <div class="p_right_1">Телефон</div>
+                </div>
+                <input type="text" name="name" required class="input2">
+                <input type="tel" name="phone" required class="input2" oninput="maskPhone(this)" ><br>
+                <div class="input_p3">Улица</div>
+                <input type="text" name="street" required class="input3"><br>
+                <div class="block_4">
+                    <div class="block_block">Дом</div>
+                    <div class="block_block">Корпус</div>
+                    <div class="block_block">Квартира</div>
+                    <div class="block_block">Этаж</div>
+                </div>
+                <input type="text" name="house" required class="input4">
+                <input type="text" name="building" class="input4">
+                <input type="text" name="apartment" class="input4">
+                <input type="number" name="floor" class="input4">
+            </div>
+            <div class="orderForm_right">
+                <div class="orderForm_div">Комментарий</div>
+                <textarea name="comment" placeholder=""></textarea><br>
+                <div class="div_div_2">
+                    <input type="radio" name="change" value="Сдача" class="input_1_1"> Потребуется сдача
+                    <input type="radio" name="change" value="Карта" class="input_1_2"> Оплата по карте<br>
+                    <div class="input_div_1">
+                    <input type="checkbox" name="noCall" class="input_1_3"> Не перезванивать<br>
+                  </div>
+                </div>
+                <input type="submit" value="Заказать" class="shjsbsiu" onclick="submitForm(event)">
+
+
+                <div id="modale" style="display: none;">
+                  <p>Сообщение отправлено</p>
+                  <button id="closeButton">Закрыть</button>
+                </div>
+
+                <input type="reset" value="Очистить" class="reset-2">
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeeModal()">&times;</span>
+        <p>Спасибо за покупку!</p>
+        <button onclick="closeeModal()">Закрыть</button>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<div class="mrburger-map" id="section9">
+
+  <div id="map" style="width: 100%; height: 650px;"></div>
+
+</div>
+
+
+<div class="footer">
+  <div class="left">
+    <p class="p_footer">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
+    <p class="p_footer2">Телефон: +7 (812) 377-13-77</p>
+  </div>
+  <div class="right">
+    <a href="#" class="a_footer1"></a>
+    <a href="#" class="a_footer2"></a>
+    <a href="#" class="a_footer3"></a>
+    <a href="#" class="a_footer4"></a>
+  </div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="zxc.js">
+
+
+  
+ </script>
+</body>
+</html>

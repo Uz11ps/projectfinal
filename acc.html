@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one, .two, .three{
+            width: 1200px;
+            height: 650px;
+            position: absolute;
+        }
+        .one{
+            background-image: url(photo/photo-1428660386617-8d277e7deaf2.png);
+            right:-60%;
+        }
+        .two{
+            background-image: url(photo/photo-1428660386617-8d277e7deaf2.png);
+            right:-64%;
+        }
+        .three{
+            background-image: url(photo/photo-1428660386617-8d277e7deaf2.png);
+            right:-68%;
+        }
+        .container4{
+            margin:auto;
+            border: 1px solid black;
+            display:flex;
+            position:relative;
+            min-height:650px;
+            overflow:hidden;
+            background-image: url(photo/photo-1428660386617-8d277e7deaf2.png);
+            background-size: cover;
+
+        }
+        .show{
+            transform: translateX(-93%);
+            transition: 1s;
+        }
+        .menu_texty{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            font-size: 72px;
+line-height: 64px;
+color: #ffffff;
+font-family: "Gagalin";
+        }
+        .text_wrap{
+            position: relative;
+            transform: rotate(-90deg);
+            font-size: 40px;
+line-height: 64px;
+color: #ffffff;
+font-family: "Gagalin";
+bottom: 12%;
+left: -47%;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container4">
+        <div class="menu_texty">МЕНЮ</div>
+        <div class="one" id="oneio">
+            <div class="text_wrap">ДЛЯ МЯСОЕДОВ</div>
+        </div>
+        <div class="two" id="twoio">
+            <div class="text_wrap">ВЕГЕТАРИАНСКОЕ</div>
+        </div>
+        <div class="three" id="threeio">
+            <div class="text_wrap">ДИЕТИЧЕСКОЕ</div>
+        </div>
+    </div>
+    <script>
+        oneio.addEventListener("click", function(){
+            if(oneio.classList.contains('show')){
+                if(twoio.classList.contains('show')){
+                    twoio.classList.remove('show');
+                    threeio.classList.remove('show');
+                }
+                else{
+                    oneio.classList.remove('show');
+                }
+            }
+            else{
+                oneio.classList.add('show');
+            }
+        });
+        twoio.addEventListener("click", function(){
+            if(twoio.classList.contains('show')){
+                twoio.classList.remove('show');
+                oneio.classList.remove('show');
+                threeio.classList.remove('show');
+            }
+            else{
+                oneio.classList.add('show');
+                twoio.classList.add('show');
+            }
+        });
+        threeio.addEventListener("click", function(){
+            if(threeio.classList.contains('show')){
+                oneio.classList.remove('show');
+                threeio.classList.remove('show');
+                twoio.classList.remove('show');
+            }
+            else{
+                oneio.classList.add('show');
+                twoio.classList.add('show');
+                threeio.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
